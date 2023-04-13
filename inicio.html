@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Etiquetas <meta> obligatorias para Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Enlazando el CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Página de inicio de sesión y registro simulados</title>
+    <style>
+        body{
+                                background-color: rgb(78, 78, 80);
+            }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Rayo Makween</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./servicio.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contactanos</a>
+            </li>
+            <li class="form-inline my-2 my-lg-0">
+              <a class="nav-item btn-outline-success" href="./inicio.html">Inicia Sesión</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Iniciar sesión</h2>
+          <form onsubmit="return login()">
+            <div class="form-group">
+              <label for="username">Nombre de usuario</label>
+              <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            <br>
+            <br>
+          </form>
+          <div id="login-message"></div>
+        </div>
+        <div class="col-md-6">
+          <h2>Registrarse</h2>
+          <form onsubmit="return register()">
+            <div class="form-group">
+              <label for="username">Nombre de usuario</label>
+              <input type="text" class="form-control" id="new-username" name="new-username" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" id="new-password" name="new-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </form>
+          <div id="register-message"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "usuario" && password === "1234") {
+          document.getElementById("login-message").innerHTML = '<div class="alert alert-success" role="alert">Inicio de sesión exitoso</div>';
+          return false;
+        } else {
+          document.getElementById("login-message").innerHTML = '<div class="alert alert-danger" role="alert">Nombre de usuario o contraseña incorrectos</div>';
+          return false;
+        }
+      }
+
+      function register() {
+        var newUsername = document.getElementById("new-username").value;
+        var email = document.getElementById("email").value;
+        var newPassword = document.getElementById("new-password").value;
+        document.getElementById("register-message").innerHTML = '<div class="alert alert-success" role="alert">Registro exitoso</div>';
+        return false;
+      }
+    </script>
+  <!-- Footer -->
+  <section id="footer">  
+    <div class="container">  
+    <div class="row text-center text-xs-center text-sm-left text-md-left">  
+        </div>  
+        <div class="row">  
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">  
+        <ul class="list-unstyled list-inline social text-center">  
+        <li class="list-inline-item"> <a href="https://www.facebook.com" ><img src="./img/face.png" height="26">  <i class="fa fa-facebook"> </i> </a> </li>  
+        <li class="list-inline-item"> <a href="https://twitter.com/i/flow/login"><img src="./img/twiter.png" height="26"> <i class="fa fa-twitter"> </i> </a> </li>  
+        <li class="list-inline-item"> <a href="https://www.instagram.com/"> <img src="./img/insta.png" height="22"><i class="fa fa-instagram"> </i > </a> </li>  
+        </ul>  
+        </div>  
+        <hr>  
+        </div>      
+        <div class="row">  
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">  
+       <p class="h6"> 2023 Copyright Reservado.</p>  
+        </div>  
+        <hr>  
+        </div>      
+        </div>  
+        </section> 
+<!-- Opcional: enlazando el JavaScript de Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
