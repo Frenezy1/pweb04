@@ -13,9 +13,10 @@
         body{
                                 background-color: rgb(78, 78, 80);
             }
+        
     </style>
   </head>
-  <body>
+  <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./index.html">Rayo Makween</a>
@@ -33,6 +34,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./contact.html">Contactanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./somos.html">Quienes Somos</a>
             </li>
             <li class="form-inline my-2 my-lg-0">
               <a class="nav-item btn-outline-success" href="./inicio.html">Inicia Sesión</a>
@@ -53,8 +57,8 @@
           <h2>Iniciar sesión</h2>
           <form onsubmit="return login()">
             <div class="form-group">
-              <label for="username">Nombre de usuario</label>
-              <input type="text" class="form-control" id="username" name="username" required>
+              <label for="username">Correo electrónico</label>
+              <input type="email" class="form-control" id="username" name="username" required>
             </div>
             <div class="form-group">
               <label for="password">Contraseña</label>
@@ -113,7 +117,7 @@
     </script>
   <!-- Footer -->
   <section id="footer">  
-    <div class="container">  
+    <div class="container">    
     <div class="row text-center text-xs-center text-sm-left text-md-left">  
         </div>  
         <div class="row">  

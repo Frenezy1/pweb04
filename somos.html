@@ -14,10 +14,20 @@
         body{
                                 background-color: rgb(78, 78, 80);
             }
-        .map {
-         align-items: center;
-         justify-content: center;
-            }
+        table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+          td {
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+      }
+         img {
+        width: 100%;
+        height: auto;
+      }
     </style>
 
   </head>
@@ -54,87 +64,39 @@
       </div>
     </nav>
     <br> 
-    <h5 class="text-center text-white">Contactanos</h5>
+    <h5 class="text-center text-white">Quienes somos</h5>
 	  <br>
 	  <section id="contact">  
 		<header class="masthead text-center" >
-			<section id="Contacto" > 
-	<form onsubmit="return validarFormulario()">
-		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" name="nombre" pattern="[A-Za-z]+" required><br><br>
-
-		<label for="apellido">Apellido:</label>
-		<input type="text" id="apellido" name="apellido" pattern="[A-Za-z]+" required><br><br>
-
-		<label for="email">Correo:</label>
-		<input type="email" id="email" name="email" required><br><br>
-
-		<label for="telefono">Teléfono:</label>
-		<input type="tel" id="telefono" name="telefono" pattern="[9]{1}[0-9]{8}" required><br><br>
-
-		<label for="direccion">Dirección:</label>
-		<input type="text" id="direccion" name="direccion" required><br><br>
-
-		<label for="comuna">Comuna:</label>
-		<select id="comuna" name="comuna" required>
-			<option value="">Seleccione una opción</option>
-			<option value="Las Condes">Las Condes</option>
-			<option value="Providencia">Providencia</option>
-			<option value="Ñuñoa">Ñuñoa</option>
-		</select><br><br>
-
-		<label for="opciones">Como contactar:</label><br>
-		<input type="checkbox" id="opciones1" name="opciones[]" value="Opción 1">
-		<label for="opciones1">Via Télefono</label><br>
-		<input type="checkbox" id="opciones2" name="opciones[]" value="Opción 2">
-		<label for="opciones2">Via Correo</label><br><br>
-
-		<label for="comentarios">Comentarios:</label><br>
-		<textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
-
-		<input type="submit" value="Enviar">
-    <br>
-    <br>
-    <br>
-    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.625533078513!2d-70.61709308480111!3d-33.43300588077905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7b8af466fd%3A0xc8fd2d768e783103!2sDuoc%20UC%3A%20Antonio%20Varas!5e0!3m2!1ses!2scl!4v1683506426643!5m2!1ses!2scl" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-	</form>
-</section> 
-
-	<script>
-		function validarFormulario() {
-			// Validar que los campos estén llenos
-			var nombre = document.getElementById("nombre").value;
-			var apellido = document.getElementById("apellido").value;
-			var email = document.getElementById("email").value;
-			var telefono = document.getElementById("telefono").value;
-			var direccion = document.getElementById("direccion").value;
-			var comuna = document.getElementById("comuna").value;
-
-			if (nombre === "" || apellido === "" || email === "" || telefono === "" || direccion === "" || comuna === "") {
-				alert("Por favor complete todos los campos");
-				return false;
-			}
-
-			// Validar que los campos "Nombre" y "Apellido" solo contengan letras
-			var letras = /^[A-Za-z]+$/;
-			if (!nombre.match(letras) || !apellido.match(letras)) {
-				alert("Los campos 'Nombre' y 'Apellido' solo pueden contener letras");
-				return false;
-			}
-
-			// Validar que el campo "Número de teléfono" sea un número de 9 dígitos que comience con 9
-			var telefonoValido = /^[9]{1}[0-9]{8}$/;
-			if (!telefono.match(telefonoValido)) {
-				alert("Por favor ingrese un número de teléfono válido (debe ser un número de 9 dígitos que comience con 9)");
-				return false;
-			}
-
-			// Mostrar mensaje de éxito si se pasaron todas las validaciones
-			alert("Datos enviados con éxito");
-			return true;
-		}
-	</script>
-    </header>
+			<section id="text-center" > 
+                <h1> Somos un taller creado para ti</h1>
+                <br>
+                <h6> Somos un grupo de amigos egresados con distincion de la carrera automotriz </h6>
+                <h6> Los cuales formamos este taller por amor a los autos </h6>
+                <table>
+                    <tr>
+                      <td>
+                        <img src="./img/est/carlos.jpg" alt="Imagen 1">
+                        <p>Carlos</p>
+                        <p>25 años</p>
+                        <p>Experto en cajas de embriague</p>
+                      </td>
+                      <td>
+                        <img src="./img/est/matias.jpg" alt="Imagen 2">
+                        <p>Matias</p>
+                        <p>28 años</p>
+                        <p>Experto en motores</p>
+                      </td>
+                      <td>
+                        <img src="./img/est/ricardo.jpeg" alt="Imagen 3">
+                        <p>Ricardo</p>
+                        <p>26 años</p>
+                        <p>Experto en desabolladura y pintura</p>
+                      </td>
+                    </tr>
+                  </table>
+            </section> 
+        </header>
     <!-- Footer -->
     <section id="footer">  
         <div class="container">  
