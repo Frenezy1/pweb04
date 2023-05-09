@@ -48,8 +48,8 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." id="search-input">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">ir</button>
         </form>
       </div>
     </nav>
@@ -133,6 +133,28 @@
 			alert("Datos enviados con éxito");
 			return true;
 		}
+    document.getElementById("search-button").addEventListener("click", function(event) {
+      event.preventDefault(); // Previne que el formulario se envíe al hacer clic en el botón
+      var query = document.getElementById("search-input").value; // Obtiene el valor del input de búsqueda
+      buscar(query); // Llama a la función buscar con el valor del input de búsqueda como argumento
+      });
+    function buscar(query) {
+      if (!query.trim()) { // Si la entrada del usuario está vacía o solo contiene espacios en blanco
+        alert("Por favor ingrese un término de búsqueda.");
+      } else if (query.toLowerCase() === "home") {
+        window.location.href = "index.html";
+      } else if (query.toLowerCase() === "servicios") {
+        window.location.href = "servicio.html";
+      } else if (query.toLowerCase() === "contactanos") {
+        window.location.href = "contact.html";
+      } else if (query.toLowerCase() === "quienes somos") {
+        window.location.href = "somos.html";
+      } else if (query.toLowerCase() === "inicia sesion") {
+        window.location.href = "inicio.html";
+      } else {
+        alert("No se encontraron resultados para su búsqueda.");
+      }
+        }
 	</script>
     </header>
     <!-- Footer -->
